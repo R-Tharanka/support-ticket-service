@@ -92,10 +92,10 @@ proj_support/
 2. **Database Setup**:
    ```sql
    -- Create database
-   CREATE DATABASE db_support;
+   CREATE DATABASE support_db;
    
    -- Use the database
-   USE db_support;
+   USE support_db;
    
    -- Create support_ticket table
    CREATE TABLE support_ticket (
@@ -114,12 +114,25 @@ proj_support/
 3. **Configure Database Connection**:
    - Update the database connection details in `DBConnectionManager.java`
 
-4. **Build the Project**:
+4. **Required Libraries**:
+   If not using Maven for dependency management, ensure the following JAR files are present in your `WEB-INF/lib/` directory:
+   ```
+   WEB-INF/
+   └── lib/
+       ├── javax.servlet-3.1.jar          # Servlet API (if not provided by the container)
+       ├── jstl-1.2.jar                   # JSTL implementation
+       ├── jstl-api-1.2.jar               # JSTL API
+       ├── mysql-connector-j-9.3.0.jar    # Newer MySQL JDBC driver (optional)
+       ├── mysql-connector-java-5.1.48-bin.jar  # MySQL JDBC driver (commonly used version)
+       └── servlet-api.jar                # May be redundant if using servlet container like Tomcat
+   ```
+
+5. **Build the Project**:
    ```bash
    mvn clean install
    ```
 
-5. **Deploy to Tomcat**:
+6. **Deploy to Tomcat**:
    - Copy the generated WAR file from the `target` directory to Tomcat's `webapps` folder
    - Or deploy directly from your IDE
 
