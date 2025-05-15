@@ -7,10 +7,11 @@ public class ticket_details
 	String l_name;
 	String email;
 	String date;
+	String subject;
 	String issue;
 	
 	
-	public ticket_details(int id, String f_name, String l_name, String email, String date, String issue) 
+	public ticket_details(int id, String f_name, String l_name, String email, String date, String subject, String issue) 
 	
 	{
 		//super();
@@ -19,6 +20,7 @@ public class ticket_details
 		this.l_name = l_name;
 		this.email = email;
 		this.date = date;
+		this.subject = subject;
 		this.issue = issue;
 	}
 
@@ -68,6 +70,14 @@ public class ticket_details
 
 	public void setDate(String date) {
 		this.date = date;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
 	}
 
 
