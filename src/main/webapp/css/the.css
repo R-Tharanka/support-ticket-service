@@ -101,7 +101,26 @@ footer {
     color: #fff; 
     padding: 10px;
     text-align: center; 
-    position: fixed; 
+    position: relative; 
     width: 100%; 
     bottom: 0;
+}
+
+/* inside your existing the.css or a separate crud.css */
+.crud-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0;
+}
+.crud-nav a {
+  text-decoration: none;
+  padding: .5rem 1rem;
+  background: #0056b3;
+  color: #fff;
+  border-radius: 4px;
+}
+.crud-nav a:hover {
+  background: #004494;
 }
