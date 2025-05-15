@@ -1,7 +1,6 @@
 package proj_support_package;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -16,15 +15,10 @@ public class support_ticket_utill
     {
         boolean isSuccess = false;
 
-        String url = "jdbc:mysql://localhost:3306/support_db?useSSL=false&serverTimezone=UTC";
-        String u_name = "root";
-        String pwd = "1234";
-
         try 
         {
-            Class.forName("com.mysql.cj.jdbc.Driver");
 
-            Connection con = DriverManager.getConnection(url, u_name, pwd);
+            Connection con = DBConnectionManager.getConnection();
 
             Statement stmnt = con.createStatement();
             
@@ -56,14 +50,9 @@ public class support_ticket_utill
     public static List<ticket_details> getSupportTickets() 
     {
         List<ticket_details> supportTickets = new ArrayList<>();
-        
-        String url = "jdbc:mysql://localhost:3306/support_db?useSSL=false&serverTimezone=UTC"; 
-        String u_name = "root";
-        String pwd = "1234";
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection(url, u_name, pwd);
+            Connection con = DBConnectionManager.getConnection();
             Statement stmnt = con.createStatement();
             ResultSet rs = stmnt.executeQuery("SELECT * FROM support_ticket;");
             while (rs.next()) {
@@ -90,14 +79,9 @@ public class support_ticket_utill
     public static List<ticket_details> get_view_updateSupportTicket(int id) 
     {
         List<ticket_details> v_u_supportTickets = new ArrayList<>();
-        
-        String url = "jdbc:mysql://localhost:3306/support_db?useSSL=false&serverTimezone=UTC"; 
-        String u_name = "root";
-        String pwd = "1234";
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection(url, u_name, pwd);
+            Connection con = DBConnectionManager.getConnection();
             
             Statement stmnt = con.createStatement();
             
@@ -132,15 +116,10 @@ public class support_ticket_utill
     public static boolean updateSupportTicket(int id, String f_name, String l_name, String email, String date, String issue) 
     {
     		boolean checkSuccess = false;
-    	
-    		String url = "jdbc:mysql://localhost:3306/support_db?useSSL=false&serverTimezone=UTC"; 
-            String u_name = "root";
-            String pwd = "1234";
 
           try 
           {
-        	Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection(url, u_name, pwd);
+            Connection con = DBConnectionManager.getConnection();
             
             Statement stmnt = con.createStatement();
             
@@ -172,13 +151,8 @@ public class support_ticket_utill
     ////////DELETE TICKET DETAILS //////
     public static boolean deleteSupportTicket(int id) {
     	
-    	
- 	    String url = "jdbc:mysql://localhost:3306/support_db?useSSL=false&serverTimezone=UTC";
-        String u_name = "root";
-        String pwd = "1234";
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            try (Connection con = DriverManager.getConnection(url, u_name, pwd);
+            try (Connection con = DBConnectionManager.getConnection();
                  PreparedStatement stmnt = con.prepareStatement("DELETE  FROM support_ticket WHERE id = ?")) {
                 stmnt.setInt(1, id);
                 int rowsDeleted = stmnt.executeUpdate();
