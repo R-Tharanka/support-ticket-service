@@ -48,6 +48,9 @@
 	        <label for="date">Date:</label>
 	        <input type="date" id="date" name="date" required><br><br>
 	        
+	        <label for="subject">Subject:</label>
+			<input type="text" id="subject" name="subject" required><br><br>
+	        
 	        <label for="issue">About Issue:</label><br>
 	        <textarea id="issue" name="issue" rows="4" cols="50" required></textarea><br><br>
 	        
