@@ -160,10 +160,6 @@ proj_support/
    - From the Ticket History page, click the delete icon on the desired ticket
    - Confirm deletion in the popup dialog
 
-## Screenshots
-
-*[Consider adding screenshots of the main interfaces here]*
-
 ## Servlets and Database
 
 ### Key Servlets:
