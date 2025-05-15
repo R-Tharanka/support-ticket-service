@@ -92,10 +92,10 @@ proj_support/
 2. **Database Setup**:
    ```sql
    -- Create database
-   CREATE DATABASE sdb_support;
+   CREATE DATABASE db_support;
    
    -- Use the database
-   USE sdb_support;
+   USE db_support;
    
    -- Create support_ticket table
    CREATE TABLE support_ticket (
