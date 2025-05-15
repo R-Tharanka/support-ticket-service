@@ -22,15 +22,16 @@ public class update_ticket_servlet extends HttpServlet
         String l_name=request.getParameter("lastName");
         String email = request.getParameter("email");
         String date = request.getParameter("date");
+        String subject = request.getParameter("subject");
         String issue = request.getParameter("issue");
         
         boolean isSuccess = false;
         
         System.out.println("\nupdate_ticket_servlet running");
-        System.out.println("ID: " + id + ", First Name: " + f_name + ", Last Name: " + l_name + ", Email: " + email + ", Date: " + date + ", Issue: " + issue);
+        System.out.println("ID: " + id + ", First Name: " + f_name + ", Last Name: " + l_name + ", Email: " + email + ", Date: " + date + ",  subject = '"+subject+"', Issue: " + issue);
 
         
-        isSuccess = support_ticket_utill.updateSupportTicket(id, f_name, l_name, email, date, issue);
+        isSuccess = support_ticket_utill.updateSupportTicket(id, f_name, l_name, email, date, subject, issue);
      
         if(isSuccess == true)
         {

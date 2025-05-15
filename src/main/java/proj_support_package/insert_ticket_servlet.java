@@ -21,13 +21,14 @@ public class insert_ticket_servlet extends HttpServlet {
 		String lName = request.getParameter("lastName");
 		String email = request.getParameter("email");
 		String date = request.getParameter("date");
+		String subject = request.getParameter("subject");
 		String issue = request.getParameter("issue");
 
 		boolean isSuccess = false;
 		
 		System.out.println("servlet running");
 
-		isSuccess = support_ticket_utill.insertSupportTicket( fName, lName, email, date, issue);
+		isSuccess = support_ticket_utill.insertSupportTicket( fName, lName, email, date, subject, issue);
 
 		if (isSuccess == true) 
 		{

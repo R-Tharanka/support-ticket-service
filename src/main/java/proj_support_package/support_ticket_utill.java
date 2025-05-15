@@ -11,7 +11,7 @@ public class support_ticket_utill
 {
 	
 //////////////////////	insert TICKET DETAILS /////////////////////////////////////////
-    public static boolean insertSupportTicket( String fName, String lName, String email, String date, String issue) 
+    public static boolean insertSupportTicket( String fName, String lName, String email, String date, String subject, String issue) 
     {
         boolean isSuccess = false;
 
@@ -22,7 +22,7 @@ public class support_ticket_utill
 
             Statement stmnt = con.createStatement();
             
-            String sql = "INSERT INTO support_ticket (first_name, last_name, email, date, issue) VALUES ('"+ fName + "', '"+ lName + "', '"+ email + "', '"+ date + "', '"+ issue + "')";
+            String sql = "INSERT INTO support_ticket (first_name, last_name, email, date, subject, issue) VALUES ('"+ fName + "', '"+ lName + "', '"+ email + "', '"+ date + "','" + subject + "', '"+ issue + "')";
             
             int result = stmnt.executeUpdate(sql);
             
@@ -61,9 +61,10 @@ public class support_ticket_utill
                 String lastName = rs.getString("last_name");
                 String email = rs.getString("email");
                 String date = rs.getString("date");
+                String subject = rs.getString("subject");
                 String issue = rs.getString("issue");
                 
-                ticket_details ticket = new ticket_details(id, firstName, lastName, email, date, issue);
+                ticket_details ticket = new ticket_details(id, firstName, lastName, email, date, subject, issue);
                 supportTickets.add(ticket);
             }
             con.close();
@@ -94,9 +95,10 @@ public class support_ticket_utill
                 String lastName = rs.getString("last_name");
                 String email = rs.getString("email");
                 String date = rs.getString("date");
+                String subject = rs.getString("subject");
                 String issue = rs.getString("issue");
                 
-                ticket_details ticket = new ticket_details(v_id, firstName, lastName, email, date, issue);
+                ticket_details ticket = new ticket_details(v_id, firstName, lastName, email, date, subject, issue);
                 v_u_supportTickets.add(ticket);
             }
             con.close();
@@ -113,7 +115,7 @@ public class support_ticket_utill
     ////////// UPDATE TICKET DETAILS//////////
     
 
-    public static boolean updateSupportTicket(int id, String f_name, String l_name, String email, String date, String issue) 
+    public static boolean updateSupportTicket(int id, String f_name, String l_name, String email, String date, String subject, String issue) 
     {
     		boolean checkSuccess = false;
 
@@ -123,9 +125,9 @@ public class support_ticket_utill
             
             Statement stmnt = con.createStatement();
             
-            String sql = "UPDATE support_ticket SET first_name = '"+f_name+"', last_name = '"+l_name+"', email= '"+email+"', date = '"+date+"', issue = '"+issue+"' WHERE id = '"+id+"' ";
+            String sql = "UPDATE support_ticket SET first_name = '"+f_name+"', last_name = '"+l_name+"', email= '"+email+"', date = '"+date+"', subject = '"+subject+"', issue = '"+issue+"' WHERE id = '"+id+"' ";
             
-            System.out.println("DAO - updateSupportTicket" + "ID: " + id + ", First Name: " + f_name + ", Last Name: " + l_name + ", Email: " + email + ", Date: " + date + ", Issue: " + issue);
+            System.out.println("DAO - updateSupportTicket" + "ID: " + id + ", First Name: " + f_name + ", Last Name: " + l_name + ", Email: " + email + ", Date: " + date + ", subject = '"+subject+"', Issue: " + issue);
 
             
             int reslt = stmnt.executeUpdate(sql);
