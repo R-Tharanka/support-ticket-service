@@ -14,26 +14,29 @@ import javax.servlet.http.HttpServletResponse;
 public class view_update_TicketServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	
-    
-    	
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Simply forward GET requests to your existing logic:
+        doPost(request, response);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
         int id = Integer.parseInt(request.getParameter("id"));
-        
+
         System.out.println("EditSupportTicketServlet - updated id" + id); // for debug
 
         List<ticket_details> view_update = support_ticket_utill.get_view_updateSupportTicket(id);
         request.setAttribute("view_update", view_update);
-        
-        if (view_update != null) 
-        {
-        	RequestDispatcher disp = request.getRequestDispatcher("update.jsp");
-        	disp.forward(request, response);
-        
-        } 
-        else 
-        {
-        	System.out.println("can not get data for - updated id" + id);
+
+        if (view_update != null) {
+            RequestDispatcher disp = request.getRequestDispatcher("update.jsp");
+            disp.forward(request, response);
+
+        } else {
+            System.out.println("can not get data for - updated id" + id);
         }
     }
 }
