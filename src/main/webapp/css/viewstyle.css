@@ -16,7 +16,8 @@ header {
     font-size: 24px;
     font-weight: bold;
 }
-.h1{
+
+.h1 {
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -42,46 +43,56 @@ nav ul li a:hover {
 }
 
 h2 {
-            background-color: #333; /* Sets the background color for the heading */
-            color: #fff; /* Sets the text color for the heading */
-            padding: 10px; /* Adds some padding to the heading */
-            text-align:center;
+    background-color: #333;
+    /* Sets the background color for the heading */
+    color: #fff;
+    /* Sets the text color for the heading */
+    padding: 10px;
+    /* Adds some padding to the heading */
+    text-align: center;
 }
- table {
-            width: 70%;
-            border-collapse: collapse;
-            background-color: #fff; /* Sets the background color for the table */
-            
-        }
-th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-} 
-       
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    background-color: #fff;
+    /* Sets the background color for the table */
+
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
 th {
-            background-color: #f2f2f2; /* Sets the background color for table headers */
+    background-color: #f2f2f2;
+    /* Sets the background color for table headers */
 }
+
 tr:nth-child(even) {
-            background-color: #f2f2f2; /* Sets background color for even rows */
+    background-color: #f2f2f2;
+    /* Sets background color for even rows */
 }
 
 tr:nth-child(odd) {
-            background-color: #fff; /* Sets background color for odd rows */
-        
-        
+    background-color: #fff;
+    /* Sets background color for odd rows */
+
+
 }
-  
+
 .btn {
-            padding: 6px 12px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            }
-            
-.btn-danger {
-            background-color: #f44336;
+    padding: 6px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-        
+
+.btn-danger {
+    background-color: #f44336;
+}

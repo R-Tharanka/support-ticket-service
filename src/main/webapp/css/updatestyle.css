@@ -16,7 +16,8 @@ header {
     font-size: 24px;
     font-weight: bold;
 }
-.h1{
+
+.h1 {
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -42,11 +43,12 @@ nav ul li a:hover {
 }
 
 h2 {
-            background-color: #333; 
-            color: #fff; 
-            padding: 10px; 
-            text-align:center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
 }
+
 form {
     margin: 20px auto;
     padding: 20px;
@@ -69,45 +71,65 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-.btn1,a.btn {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 15px 32px; /* Some padding */
-    text-align: center; /* Centered text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make the button inline */
-    font-size: 16px; /* Increase font size */
-    margin: 4px 2px; /* Some margin */
-    cursor: pointer; /* Pointer/hand icon */
-    border: none; /* Remove borders */
-    border-radius: 4px; /* Rounded corners */
-    transition-duration: 0.4s; /* 0.4 second transition effect to hover */
+
+.btn1,
+a.btn {
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    /* White text */
+    padding: 15px 32px;
+    /* Some padding */
+    text-align: center;
+    /* Centered text */
+    text-decoration: none;
+    /* Remove underline */
+    display: inline-block;
+    /* Make the button inline */
+    font-size: 16px;
+    /* Increase font size */
+    margin: 4px 2px;
+    /* Some margin */
+    cursor: pointer;
+    /* Pointer/hand icon */
+    border: none;
+    /* Remove borders */
+    border-radius: 4px;
+    /* Rounded corners */
+    transition-duration: 0.4s;
+    /* 0.4 second transition effect to hover */
 }
 
-button.btn1:hover, a.btn:hover {
-    background-color: white; /* White background on hover */
-    color: black; /* Black text on hover */
-    border: 2px solid #4CAF50; /* Green border on hover */
+button.btn1:hover,
+a.btn:hover {
+    background-color: white;
+    /* White background on hover */
+    color: black;
+    /* Black text on hover */
+    border: 2px solid #4CAF50;
+    /* Green border on hover */
 }
 
 a.btn {
-    background-color: #f44336; /* Red background for Cancel button */
+    background-color: #f44336;
+    /* Red background for Cancel button */
     margin-left: 10px;
 }
 
 a.btn:hover {
     background-color: white;
     color: black;
-    border: 2px solid #f44336; /* Red border on hover */
+    border: 2px solid #f44336;
+    /* Red border on hover */
 }
 
 
 footer {
-    background-color: #333; 
-    color: #fff; 
+    background-color: #333;
+    color: #fff;
     padding: 10px;
-    text-align: center; 
-    position: fixed; 
-    width: 100%; 
+    text-align: center;
+    position: fixed;
+    width: 100%;
     bottom: 0;
 }

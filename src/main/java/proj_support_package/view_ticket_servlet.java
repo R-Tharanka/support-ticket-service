@@ -1,5 +1,4 @@
 
-
 package proj_support_package;
 
 import java.io.IOException;
@@ -12,24 +11,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
 @WebServlet("/view_ticket_servlet")
 public class view_ticket_servlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         // Forward the request to the JSP
         forwardToViewTicketJSP(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         // Forward the request to the JSP
         forwardToViewTicketJSP(request, response);
     }
 
-    private void forwardToViewTicketJSP(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
-    {
+    private void forwardToViewTicketJSP(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         List<ticket_details> supportTickets = support_ticket_utill.getSupportTickets();
         request.setAttribute("tickets", supportTickets); // Set tickets list as a request attribute
 
@@ -38,5 +37,3 @@ public class view_ticket_servlet extends HttpServlet {
         disp.forward(request, response);
     }
 }
-
-
