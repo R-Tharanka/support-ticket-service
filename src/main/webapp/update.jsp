@@ -48,6 +48,9 @@
         
         <label for="date">Date:</label>
         <input type="date"  name="date" value="${details.date}" required><br><br>
+
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" value="${details.subject}" required><br><br>
         
         <label for="issue">Issue:</label><br>
         <textarea name="issue" rows="4" cols="50" required>${details.issue}</textarea><br><br>

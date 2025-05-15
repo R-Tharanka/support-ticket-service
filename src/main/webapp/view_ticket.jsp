@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -49,7 +48,7 @@
     </header>
 
     <h2>Ticket History</h2>
-    <table border="1">
+    <table style="border: 1;">
         <tr>
             <th>ID</th>
             <th>First Name</th>
@@ -76,7 +75,7 @@
                     </form>
                 </td>
                 <td>
-                    <button class="btn btn-danger" onclick="show_delete_confirm(${ticket.id})">Remove</button>
+                    <button class="btn btn-danger" onclick="show_delete_confirm('${ticket.id}')">Remove</button>
                 </td>
             </tr>
         </c:forEach>
@@ -105,11 +104,3 @@
     </script>
 </body>
 </html>
-    
- 
-             
-       
-              
-            
-        
-
