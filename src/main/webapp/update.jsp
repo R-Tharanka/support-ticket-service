@@ -63,10 +63,8 @@
                 <div class="form-group">
                     <label for="date"><i class="fas fa-calendar"></i> Date</label>
                     <input type="date" id="date" name="date" value="${details.date}" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject"><i class="fas fa-heading"></i> Subject</label>
+                </div>                <div class="form-group">
+                    <label for="subject"><i class="fas fa-tag"></i> Subject</label>
                     <input type="text" id="subject" name="subject" value="${details.subject}" required>
                 </div>
 
